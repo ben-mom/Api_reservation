@@ -1,5 +1,5 @@
 import 'reflect-metadata'
-import { Ignitor } from '@adonisjs/core/build/standalone.js'
+import { createApp } from '@adonisjs/core/factories'
 
-new Ignitor(__dirname)
-  .fireAce()
+const app = await createApp(__dirname)
+await app.startAce()
